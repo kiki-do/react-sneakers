@@ -12,11 +12,11 @@ function Header(props) {
       </div>
       <div className="rightHeader">
         <div className="cart">
-          <img onClick={props.onClickCart} src="/img/cart.svg"></img>
+          <img onClick={props.onClickCart} src="img/cart.svg"></img>
           <div className="cost">1205 руб.</div>
         </div>
-        <img className="heart" src="/img/heart.svg"></img>
-        <img className="profile" src="/img/profile.svg"></img>
+        <img className="heart" src="img/heart.svg"></img>
+        <img className="profile" src="img/profile.svg"></img>
       </div>
     </header>
   );
