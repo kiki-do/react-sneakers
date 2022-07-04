@@ -1,0 +1,68 @@
+[
+    {
+      name: 'Мужские Кроссовки Nike Blazer Mid Suede',
+      price: 12999,
+      imageUrl: '../img/sneaker.svg',
+    },
+    {
+      name: 'Мужские Кроссовки Nike Air Max 270',
+      price: 12999,
+      imageUrl: '../img/air_max.svg',
+    },
+    {
+      name: 'Мужские Кроссовки Nike Blazer Mid Suede',
+      price: 8499,
+      imageUrl: '../img/sneaker.svg',
+    },
+    {
+      name: 'Кроссовки Puma X Aka Boku Future Rider',
+      price: 8999,
+      imageUrl: '../img/puma_boku.svg',
+    },
+    {
+      name: 'Мужские Кроссовки Under Armour Curry 8',
+      price: 15199,
+      imageUrl: '../img/5.svg',
+    },
+
+    {
+      name: 'Мужские Кроссовки Nike Kyrie 7',
+      price: 11299,
+      imageUrl: '../img/6.svg',
+    },
+    {
+      name: 'Мужские Кроссовки Jordan Air Jordan 11',
+      price: 10799,
+      imageUrl: '../img/7.svg',
+    },
+    {
+      name: 'Мужские Кроссовки Nike LeBron XVIII',
+      price: 16499,
+      imageUrl: '../img/8.svg',
+    },
+    {
+      name: 'Мужские Кроссовки Nike Lebron XVIII Low',
+      price: 13999,
+      imageUrl: '../img/9.svg',
+    },
+    {
+      name: 'Мужские Кроссовки Nike Blazer Mid Suede',
+      price: 8499,
+      imageUrl: '../img/10.svg',
+    },
+    {
+      name: 'Мужские Кроссовки Nike Kyrie Flytrap IV',
+      price: 13299,
+      imageUrl: '../img/11.svg',
+    },
+  ]
+
+   // React.useEffect(() => {
+  //   fetch('https://62c29b14ff594c65675fefd6.mockapi.io/items')
+  //     .then((res) => {
+  //       return res.json;
+  //     })
+  //     .then((json) => {
+  //       setItems(json);
+  //     });
+  // }, []);
