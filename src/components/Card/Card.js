@@ -27,7 +27,7 @@ function Card({ imageUrl, title, price, onPlus }) {
           className="button"
           width={20}
           height={20}
-          src={isAdded ? '/img/plus-liked.svg' : '/img/plus.svg'}></img>
+          src={isAdded ? 'img/plus-liked.svg' : 'img/plus.svg'}></img>
       </button>
       <button>
         <img
@@ -35,7 +35,7 @@ function Card({ imageUrl, title, price, onPlus }) {
           className="button-heart"
           width={20}
           height={20}
-          src={isFavorite ? '/img/heart-liked.svg' : '/img/heart.svg'}></img>
+          src={isFavorite ? 'img/heart-liked.svg' : 'img/heart.svg'}></img>
       </button>
     </div>
   );

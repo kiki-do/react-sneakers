@@ -3,7 +3,7 @@ function Header(props) {
     <header>
       <div className="leftHeader">
         <div className="logo">
-          <img width={40} height={40} src="/img/logo.svg"></img>
+          <img width={40} height={40} src="img/logo.svg"></img>
           <div className="text">
             <h3 className="title">React sneakers</h3>
             <div className="subtitle">Магазин лучших кроссовок</div>
