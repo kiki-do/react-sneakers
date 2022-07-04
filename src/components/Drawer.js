@@ -1,4 +1,4 @@
-import '/index.scss';
+import '../index.scss';
 
 function Drawer({ onClose, onRemove, items = [] }) {
   return (
@@ -45,12 +45,12 @@ function Drawer({ onClose, onRemove, items = [] }) {
             </ul>
             <button className="book">
               <div>Оформить заказ</div>
-              <img src="/img/arrow.svg" alt="" className="arrow" />
+              <img src="img/arrow.svg" alt="" className="arrow" />
             </button>
           </div>
         ) : (
           <div onClick={onClose} className="emptyCart">
-            <img src="/img/empty_box.svg" alt="empty-cart" className="empty-box" />
+            <img src="img/empty_box.svg" alt="empty-cart" className="empty-box" />
             <h2>Корзина пустая</h2>
             <div>Добавьте хотя бы одну пару кроссовок, чтобы сделать заказ.</div>
             <button className="book">
