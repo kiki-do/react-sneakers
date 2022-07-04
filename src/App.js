@@ -45,11 +45,11 @@ function App() {
       <div className="main">
         <h1>{searchValue ? `Поиск по запросу: "${searchValue}"` : 'Все кроссовки'}</h1>
         <div className="search-block">
-          <img src="/img/search.svg" alt="" className="search-img" />
+          <img src="img/search.svg" alt="" className="search-img" />
           {searchValue && (
             <img
               onClick={() => setSearchValue('')}
-              src="/img/remove.svg"
+              src="img/remove.svg"
               alt=""
               className="remove-svg"
             />
