@@ -1,8 +1,8 @@
 import React from 'react';
 
-function Card({ imageUrl, title, price, onPlus }) {
+function Card({ imageUrl, title, price, onPlus, onFavourite, favourited = false }) {
   const [isAdded, setIsAdded] = React.useState(false);
-  const [isFavorite, setIsFavorite] = React.useState(false);
+  const [isFavourite, setIsFavourite] = React.useState(favourited);
 
   const onClickPlus = () => {
     onPlus({ imageUrl, title, price });
@@ -10,7 +10,8 @@ function Card({ imageUrl, title, price, onPlus }) {
   };
 
   const onClickHeart = () => {
-    setIsFavorite(!isFavorite);
+    onFavourite({ imageUrl, title, price });
+    setIsFavourite(!isFavourite);
   };
 
   return (
@@ -30,12 +31,14 @@ function Card({ imageUrl, title, price, onPlus }) {
           src={isAdded ? 'img/plus-liked.svg' : 'img/plus.svg'}></img>
       </button>
       <button>
-        <img
-          onClick={onClickHeart}
-          className="button-heart"
-          width={20}
-          height={20}
-          src={isFavorite ? 'img/heart-liked.svg' : 'img/heart.svg'}></img>
+        {onFavourite && (
+          <img
+            onClick={onClickHeart}
+            className="button-heart"
+            width={20}
+            height={20}
+            src={isFavourite ? 'img/heart-liked.svg' : 'img/heart.svg'}></img>
+        )}
       </button>
     </div>
   );
