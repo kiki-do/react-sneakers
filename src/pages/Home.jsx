@@ -13,7 +13,7 @@ function Home({
       <div className="main">
         <h1>{searchValue ? `Поиск по запросу: "${searchValue}"` : 'Все кроссовки'}</h1>
         <div className="search-block">
-          <img src="img/search.svg" alt="search" className="search-img" />
+          <img src="../img/search.svg" alt="search" className="search-img" />
           {searchValue && (
             <img
               onClick={() => setSearchValue('')}
