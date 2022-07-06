@@ -17,7 +17,7 @@ function Home({
           {searchValue && (
             <img
               onClick={() => setSearchValue('')}
-              src="img/remove.svg"
+              src="/img/remove.svg"
               alt="remove"
               className="remove-svg"
             />
