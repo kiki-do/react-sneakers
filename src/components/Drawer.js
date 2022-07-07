@@ -6,7 +6,7 @@ function Drawer({ onClose, onRemove, items = [] }) {
       <div className="drawer">
         <h2>
           Корзина
-          <img onClick={onClose} src="../img/remove.svg" alt="" className="removeBtn" />
+          <img onClick={onClose} src="img/remove.svg" alt="" className="removeBtn" />
         </h2>
 
         {items.length > 0 ? (
@@ -23,7 +23,7 @@ function Drawer({ onClose, onRemove, items = [] }) {
                   </div>
                   <img
                     onClick={() => onRemove(obj.id)}
-                    src="../img/remove.svg"
+                    src="img/remove.svg"
                     alt="X"
                     className="removeBtn"
                   />

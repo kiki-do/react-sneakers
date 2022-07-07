@@ -8,7 +8,7 @@ function Favourite({ items, onAddToFavourite }) {
 
       <section>
         {items.length &&
-          items?.map((item, index) => (
+          items.map((item, index) => (
             <Card
               key={index} // Желательно указывать конкретное значение в нашем случае можно указать title, price...
               imageUrl={item.imageUrl}
