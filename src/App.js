@@ -60,7 +60,7 @@ function App() {
       <Header onClickCart={() => setCartOpened(true)} />
       <Routes>
         <Route
-          path="/react-sneakers"
+          path="/react-sneakers/"
           exact
           element={
             <Home

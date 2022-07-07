@@ -5,7 +5,7 @@ function Header(props) {
     <header>
       <div className="leftHeader">
         <div className="logo">
-          <Link to="/react-sneakers">
+          <Link to="/react-sneakers/">
             <img width={40} height={40} src="img/logo.svg" alt="logo"></img>
           </Link>
           <div className="text">
