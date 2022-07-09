@@ -4,15 +4,15 @@ function Header(props) {
   return (
     <header>
       <div className="leftHeader">
-        <div className="logo">
-          <Link to="/">
+        <Link to="/">
+          <div className="logo">
             <img width={40} height={40} src="img/logo.svg" alt="logo"></img>
-          </Link>
-          <div className="text">
-            <h3 className="title">React sneakers</h3>
-            <div className="subtitle">Магазин лучших кроссовок</div>
+            <div className="text">
+              <h3 className="title">React sneakers</h3>
+              <div className="subtitle">Магазин лучших кроссовок</div>
+            </div>
           </div>
-        </div>
+        </Link>
       </div>
       <div className="rightHeader">
         <div className="cart">
