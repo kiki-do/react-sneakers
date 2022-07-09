@@ -13,15 +13,11 @@ function Home({
       <div className="main">
         <h1>{searchValue ? `Поиск по запросу: "${searchValue}"` : 'Все кроссовки'}</h1>
         <div className="search-block">
-          <img
-            src="https://github.com/kiki-do/react-sneakers/blob/master/public/img/search.svg"
-            alt="search"
-            className="search-img"
-          />
+          <img src="img/search.svg" alt="search" className="search-img" />
           {searchValue && (
             <img
               onClick={() => setSearchValue('')}
-              src="../img/remove.svg"
+              src="img/remove.svg"
               alt="remove"
               className="remove-svg"
             />

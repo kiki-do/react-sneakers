@@ -60,7 +60,7 @@ function App() {
       <Header onClickCart={() => setCartOpened(true)} />
       <Routes>
         <Route
-          path="/react-sneakers/"
+          path="/"
           exact
           element={
             <Home
@@ -73,7 +73,7 @@ function App() {
             />
           }></Route>
         <Route
-          path="favourite"
+          path="/favourite"
           exact
           element={<Favourite items={favourite} onAddToFavourite={onAddToFavourite} />}></Route>
       </Routes>

@@ -5,7 +5,7 @@ function Header(props) {
     <header>
       <div className="leftHeader">
         <div className="logo">
-          <Link to="/react-sneakers/">
+          <Link to="/">
             <img width={40} height={40} src="img/logo.svg" alt="logo"></img>
           </Link>
           <div className="text">
@@ -21,7 +21,7 @@ function Header(props) {
         </div>
 
         <Link to="/favourite">
-          <img className="heart" src="../img/heart.svg" alt="heart"></img>
+          <img className="heart" src="img/heart.svg" alt="heart"></img>
         </Link>
         <img className="profile" src="img/profile.svg"></img>
       </div>
