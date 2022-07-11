@@ -5,19 +5,25 @@ function Favourite({ items, onAddToFavourite }) {
   return (
     <div>
       <div className="favourite">Мои закладки</div>
-
-      <section>
-        {items.length &&
-          items.map((item, index) => (
+      {items.length > 0 ? (
+        <section>
+          {items.map((item, index) => (
             <Card
               key={index} // Желательно указывать конкретное значение в нашем случае можно указать title, price...
               imageUrl={item.imageUrl}
-              favourited
+              favourited={true}
               onFavourite={onAddToFavourite}
               {...item}
             />
           ))}
-      </section>
+        </section>
+      ) : (
+        <div className="empty_favourite">
+          <img src="img/sad_smile.svg" alt="sad" />
+          <h2 className="favourite_text">Закладок нет</h2>
+          <div className="favourite_subtitle"> Вы ничего не добавляли в закладки</div>
+        </div>
+      )}
     </div>
   );
 }
