@@ -1,5 +1,4 @@
 import Card from '../components/Card/Card';
-
 function Home({
   searchValue,
   setSearchValue,

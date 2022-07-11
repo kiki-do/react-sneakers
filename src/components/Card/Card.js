@@ -1,5 +1,5 @@
 import React from 'react';
-
+import s from './Card.module.scss';
 function Card({ imageUrl, title, price, onPlus, onFavourite, favourited = false }) {
   const [isAdded, setIsAdded] = React.useState(false);
   const [isFavourite, setIsFavourite] = React.useState(favourited);
@@ -15,17 +15,17 @@ function Card({ imageUrl, title, price, onPlus, onFavourite, favourited = false 
   };
 
   return (
-    <div className="card">
-      <img className="sneakers" width={133} height={112} src={imageUrl} alt=""></img>
+    <div className={s.card}>
+      <img className={s.sneakers} width={133} height={112} src={imageUrl} alt=""></img>
       <p>{title}</p>
-      <div className="price">
+      <div className={s.price}>
         <span>Цена:</span>
         <b>{price} руб.</b>
       </div>
       <button>
         <img
           onClick={onClickPlus}
-          className="button"
+          className={s.button}
           width={20}
           height={20}
           src={isAdded ? 'img/plus-liked.svg' : 'img/plus.svg'}></img>
@@ -34,7 +34,7 @@ function Card({ imageUrl, title, price, onPlus, onFavourite, favourited = false 
         {onFavourite && (
           <img
             onClick={onClickHeart}
-            className="button-heart"
+            className={s.button__heart}
             width={20}
             height={20}
             src={isFavourite ? 'img/heart-liked.svg' : 'img/heart.svg'}></img>

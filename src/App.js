@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import Home from './pages/Home';
 import Favourite from './pages/Favourite';
-import Drawer from './components/Drawer';
+import Drawer from './components/Drawer/Drawer';
 import Header from './components/Header';
 import axios from 'axios';
 import { Route, Routes } from 'react-router-dom';
@@ -35,16 +35,16 @@ function App() {
 
   const onAddToFavourite = (obj) => {
     axios.post('https://62c29b14ff594c65675fefd6.mockapi.io/favourite', obj);
-    setFavourite((prev) => [...prev, obj]);
+    setCartItems((prev) => [...prev, obj]);
   };
 
   const onRemoveItem = (id) => {
     axios.delete(`https://62c29b14ff594c65675fefd6.mockapi.io/cart/${id}`);
-    setCartItems((prev) => prev.filter((item) => item.id !== id));
+    setFavourite((prev) => prev.filter((item) => item.id !== id));
   };
 
   // const onRemoveFavourite = (id) => {
-  //   axios.delete(`https://62c29b14ff594c65675fefd6.mockapi.io/favourite/${id}`);
+  //
   //   setFavourite((prev) => prev.filter((item) => item.id !== id));
   // };
 
@@ -60,7 +60,7 @@ function App() {
       <Header onClickCart={() => setCartOpened(true)} />
       <Routes>
         <Route
-          path="/"
+          path="/react-sneakers/"
           exact
           element={
             <Home
@@ -73,7 +73,7 @@ function App() {
             />
           }></Route>
         <Route
-          path="/favourite"
+          path="/react-sneakers/favourite"
           exact
           element={<Favourite items={favourite} onAddToFavourite={onAddToFavourite} />}></Route>
       </Routes>
@@ -82,3 +82,10 @@ function App() {
 }
 
 export default App;
+
+// if (favourite.find((findObj) => findObj.id === obj.id)) {
+//   axios.delete(`https://62c29b14ff594c65675fefd6.mockapi.io/favourite/${obj.id}`);
+// }
+// axios.post('https://62c29b14ff594c65675fefd6.mockapi.io/favourite', obj);
+// setFavourite((prev) => [...prev, obj]);
+// };

@@ -4,23 +4,24 @@ function Header(props) {
   return (
     <header>
       <div className="leftHeader">
-        <Link to="/">
-          <div className="logo">
+        <div className="logo">
+          <Link to="/react-sneakers/">
             <img width={40} height={40} src="img/logo.svg" alt="logo"></img>
-            <div className="text">
-              <h3 className="title">React sneakers</h3>
-              <div className="subtitle">Магазин лучших кроссовок</div>
-            </div>
+          </Link>
+          <div className="text">
+            <h3 className="title">React sneakers</h3>
+            <div className="subtitle">Магазин лучших кроссовок</div>
           </div>
-        </Link>
+        </div>
       </div>
+
       <div className="rightHeader">
         <div className="cart">
           <img onClick={props.onClickCart} src="img/cart.svg"></img>
           <div className="cost">1205 руб.</div>
         </div>
 
-        <Link to="/favourite">
+        <Link to="/react-sneakers/favourite">
           <img className="heart" src="img/heart.svg" alt="heart"></img>
         </Link>
         <img className="profile" src="img/profile.svg"></img>

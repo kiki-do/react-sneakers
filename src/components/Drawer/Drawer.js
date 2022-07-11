@@ -1,9 +1,9 @@
-import '../index.scss';
+import s from './Drawer.module.scss';
 
 function Drawer({ onClose, onRemove, items = [] }) {
   return (
-    <div className="overlay">
-      <div className="drawer">
+    <div className={s.overlay}>
+      <div className={s.drawer}>
         <h2>
           Корзина
           <img onClick={onClose} src="img/remove.svg" alt="" className="removeBtn" />
@@ -11,13 +11,13 @@ function Drawer({ onClose, onRemove, items = [] }) {
 
         {items.length > 0 ? (
           <div>
-            <div className="items">
+            <div className={s.items}>
               {items.map((obj) => (
-                <div className="cartItem">
+                <div className={s.cartItem}>
                   <div
                     style={{ backgroundImage: `url(${obj.imageUrl})` }}
-                    className="cartItemImg"></div>
-                  <div className="text">
+                    className={s.cartItemImg}></div>
+                  <div className={s.text}>
                     <p>{obj.title}</p>
                     <b>{obj.price} руб.</b>
                   </div>
@@ -25,7 +25,7 @@ function Drawer({ onClose, onRemove, items = [] }) {
                     onClick={() => onRemove(obj.id)}
                     src="img/remove.svg"
                     alt="X"
-                    className="removeBtn"
+                    className={s.removeBtn}
                   />
                 </div>
               ))}
@@ -43,19 +43,19 @@ function Drawer({ onClose, onRemove, items = [] }) {
                 <b>1074 руб.</b>
               </li>
             </ul>
-            <button className="book">
+            <button className={s.book}>
               <div>Оформить заказ</div>
-              <img src="img/arrow.svg" alt="" className="arrow" />
+              <img src="img/arrow.svg" alt="" className={s.arrow} />
             </button>
           </div>
         ) : (
-          <div onClick={onClose} className="emptyCart">
-            <img src="img/empty_box.svg" alt="empty-cart" className="empty-box" />
+          <div onClick={onClose} className={s.emptyCart}>
+            <img src="img/empty_box.svg" alt="empty-cart" className={s.empty__box} />
             <h2>Корзина пустая</h2>
             <div>Добавьте хотя бы одну пару кроссовок, чтобы сделать заказ.</div>
-            <button className="book">
+            <button className={s.book}>
               <div>Вернуться назад</div>
-              <img src="img/left-arrow.svg" alt="" className="arrow" />
+              <img src="img/left-arrow.svg" alt="" className={s.arrow} />
             </button>
           </div>
         )}
