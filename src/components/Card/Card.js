@@ -1,16 +1,27 @@
 import React from 'react';
 import s from './Card.module.scss';
-function Card({ imageUrl, title, price, onPlus, onFavourite, favourited = false, id }) {
+function Card({
+  id,
+  imageUrl,
+  title,
+  price,
+  onPlus,
+  onFavourite,
+  favourited = false,
+  productId,
+
+  // liked = false,
+}) {
   const [isAdded, setIsAdded] = React.useState(false);
   const [isFavourite, setIsFavourite] = React.useState(favourited);
 
   const onClickPlus = () => {
-    onPlus({ imageUrl, title, price, id });
+    onPlus({ productId, id, imageUrl, title, price });
     setIsAdded(!isAdded);
   };
 
   const onClickHeart = () => {
-    onFavourite({ imageUrl, title, price, id });
+    onFavourite({ productId, id, imageUrl, title, price });
     setIsFavourite(!isFavourite);
   };
 

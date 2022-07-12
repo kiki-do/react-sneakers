@@ -35,9 +35,7 @@ function Home({
           .map((item, index) => (
             <Card
               key={index} // Желательно указывать конкретное значение в нашем случае можно указать title, price...
-              title={item.title}
-              price={item.price}
-              imageUrl={item.imageUrl}
+              {...item}
               onPlus={(obj) => onAddToCart(obj)}
               onFavourite={(obj) => onAddToFavourite(obj)}
             />

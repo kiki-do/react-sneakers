@@ -29,9 +29,11 @@ function App() {
   }, []);
 
   const onAddToCart = async (obj) => {
-    if (cartItems.find((item) => Number(item.id) === Number(obj.id))) {
+    if (cartItems.find((item) => Number(item.productId) === Number(obj.productId))) {
       axios.delete(`https://62c29b14ff594c65675fefd6.mockapi.io/cart/${obj.id}`);
-      setCartItems((prev) => prev.filter((item) => Number(item.id) !== Number(obj.id)));
+      setCartItems((prev) =>
+        prev.filter((item) => Number(item.productId) !== Number(obj.productId)),
+      );
     } else {
       const { data } = await axios.post('https://62c29b14ff594c65675fefd6.mockapi.io/cart', obj);
       setCartItems((prev) => [...prev, data]);
@@ -39,21 +41,29 @@ function App() {
   };
 
   const onAddToFavourite = async (obj) => {
-    if (favourite.find((findObj) => findObj.id === obj.id)) {
-      axios.delete(`https://62c29b14ff594c65675fefd6.mockapi.io/favourite/${obj.id}`);
-      setFavourite((prev) => prev.filter((item) => item.id !== obj.id));
-    } else {
-      const { data } = await axios.post(
-        'https://62c29b14ff594c65675fefd6.mockapi.io/favourite',
-        obj,
-      );
-      setFavourite((prev) => [...prev, data]);
+    console.log(obj);
+    try {
+      if (favourite.find((findObj) => Number(findObj.productId) === Number(obj.productId))) {
+        axios.delete(`https://62c29b14ff594c65675fefd6.mockapi.io/favourite/${obj.productId}`);
+        setFavourite((prev) =>
+          prev.filter((item) => Number(item.productId) !== Number(obj.productId)),
+        );
+      } else {
+        const { data } = await axios.post(
+          'https://62c29b14ff594c65675fefd6.mockapi.io/favourite',
+          obj,
+        );
+        setFavourite((prev) => [...prev, data]);
+      }
+    } catch (error) {
+      alert('Не удалось');
     }
   };
 
   const onRemoveItem = (id) => {
+    console.log(id);
     axios.delete(`https://62c29b14ff594c65675fefd6.mockapi.io/cart/${id}`);
-    setCartItems((prev) => prev.filter((item) => item.id !== id));
+    setCartItems((prev) => prev.filter((item) => item.productId !== id));
   };
 
   const onChangeSearchInput = (event) => {
