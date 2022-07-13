@@ -8,11 +8,12 @@ function Card({
   onPlus,
   onFavourite,
   favourited = false,
+  liked = false,
   productId,
 
   // liked = false,
 }) {
-  const [isAdded, setIsAdded] = React.useState(false);
+  const [isAdded, setIsAdded] = React.useState(liked);
   const [isFavourite, setIsFavourite] = React.useState(favourited);
 
   const onClickPlus = () => {

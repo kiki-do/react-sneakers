@@ -1,6 +1,6 @@
 import s from './Drawer.module.scss';
 
-function Drawer({ onClose, onRemove, items = [] }) {
+function Drawer({ onClose, onRemove, items = [], countSneakers }) {
   return (
     <div className={s.overlay}>
       <div className={s.drawer}>
@@ -35,12 +35,12 @@ function Drawer({ onClose, onRemove, items = [] }) {
               <li>
                 <span>Итого: </span>
                 <div> </div>
-                <b>21 498 руб.</b>
+                <b>{countSneakers} руб.</b>
               </li>
               <li>
                 <span>Налог 5%: </span>
                 <div> </div>
-                <b>1074 руб.</b>
+                <b>{Math.round(countSneakers * 0.05)} руб.</b>
               </li>
             </ul>
             <button className={s.book}>

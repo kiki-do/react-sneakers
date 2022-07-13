@@ -1,7 +1,7 @@
 import React from 'react';
 import Card from '../components/Card/Card';
 
-function Favourite({ items, onAddToFavourite, id }) {
+function Favourite({ items, onAddToFavourite }) {
   return (
     <div>
       <div className="favourite">Мои закладки</div>

@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-function Header(props) {
+function Header({ onClickCart, countSneakers }) {
   return (
     <header>
       <div className="leftHeader">
@@ -14,16 +14,12 @@ function Header(props) {
           </div>
         </div>
       </div>
-      {props.onClickCart ? (
-        <div style={{ overflowY: `hidden` }}></div>
-      ) : (
-        <div style={{ overflowY: 'scroll' }}></div>
-      )}
+
       <div className="rightHeader">
         <div className="cart">
-          <img onClick={props.onClickCart} src="img/cart.svg"></img>
+          <img onClick={onClickCart} src="img/cart.svg"></img>
 
-          <div className="cost">1205 руб.</div>
+          <div className="cost">{countSneakers} руб</div>
         </div>
 
         <Link to="/react-sneakers/favourite">

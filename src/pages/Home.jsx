@@ -1,4 +1,5 @@
 import Card from '../components/Card/Card';
+import Favourite from './Favourite';
 function Home({
   searchValue,
   setSearchValue,
@@ -6,6 +7,8 @@ function Home({
   items,
   onAddToCart,
   onAddToFavourite,
+  cartItems,
+  favourite,
 }) {
   return (
     <div>
@@ -38,6 +41,8 @@ function Home({
               {...item}
               onPlus={(obj) => onAddToCart(obj)}
               onFavourite={(obj) => onAddToFavourite(obj)}
+              liked={cartItems.some((obj) => obj.productId === item.productId)}
+              favourited={favourite.find((obj) => obj.productId === item.productId)}
             />
           ))}
       </section>
