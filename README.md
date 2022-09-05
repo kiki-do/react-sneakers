@@ -9,7 +9,7 @@
  - SASS 
  - React 
  - JavaScript
- - axios
+ - Axios
 
   
  
