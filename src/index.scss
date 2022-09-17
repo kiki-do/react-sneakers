@@ -141,7 +141,7 @@ h1{
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-
+  
 
   .search-block{ 
     position: relative;
@@ -187,6 +187,7 @@ h1{
   padding-bottom: 40px;
   display: flex;
   flex-direction: column;
+  position: relative;
   font-family: 'Inter';
   font-style: normal;
   font-weight: 700;
@@ -204,9 +205,23 @@ h1{
     opacity: 0.4;
   }
   &_text{
+    
     text-align: center;
   }
   
+
+  &__button{
+    position: absolute;
+    padding: 15px;
+    border-radius: 12px;
+    right: 50px;
+    top: -80px;
+    background: #e7f6ff;
+    font-size: 14px;
+    font-weight: 500;
+    color: #5C5C5C;
+    
+  }
 }
 
 .empty_favourite{ 
@@ -214,10 +229,19 @@ h1{
   flex-direction: column;
   justify-content: center;
   height: 300px;
+  gap: 20px;
   img{
     width: 70px;
     height: 70px;
     margin-left: 505px;
   }  
 }
+section {
+      position: relative;
+      
+    }
 
+.favourite_text{
+  display: flex;
+  justify-content: center;
+}

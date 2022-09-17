@@ -1,6 +1,13 @@
+import React from 'react';
 import s from './Drawer.module.scss';
+import { useSelector } from 'react-redux';
 
-function Drawer({ onClose, onRemove, items = [], countSneakers }) {
+import DrawerItem from '../DrawerItem/DrawerItem';
+
+const Drawer = ({ onClose }) => {
+  const items = useSelector((state) => state.cartSlice.items);
+  const totalPrice = useSelector((state) => state.cartSlice.totalPrice);
+
   return (
     <div className={s.overlay}>
       <div className={s.drawer}>
@@ -13,21 +20,7 @@ function Drawer({ onClose, onRemove, items = [], countSneakers }) {
           <div>
             <div className={s.items}>
               {items.map((obj) => (
-                <div key={obj.id} className={s.cartItem}>
-                  <div
-                    style={{ backgroundImage: `url(${obj.imageUrl})` }}
-                    className={s.cartItemImg}></div>
-                  <div className={s.text}>
-                    <p>{obj.title}</p>
-                    <b>{obj.price} руб.</b>
-                  </div>
-                  <img
-                    onClick={() => onRemove(obj.productId)}
-                    src="img/remove.svg"
-                    alt="X"
-                    className={s.removeBtn}
-                  />
-                </div>
+                <DrawerItem key={obj.id} {...obj} />
               ))}
             </div>
 
@@ -35,12 +28,12 @@ function Drawer({ onClose, onRemove, items = [], countSneakers }) {
               <li>
                 <span>Итого: </span>
                 <div> </div>
-                <b>{countSneakers} руб.</b>
+                <b>{totalPrice} руб.</b>
               </li>
               <li>
                 <span>Налог 5%: </span>
                 <div> </div>
-                <b>{Math.round(countSneakers * 0.05)} руб.</b>
+                <b>{Math.round(totalPrice * 0.05)} руб.</b>
               </li>
             </ul>
             <button className={s.book}>
@@ -62,6 +55,6 @@ function Drawer({ onClose, onRemove, items = [], countSneakers }) {
       </div>
     </div>
   );
-}
+};
 
 export default Drawer;

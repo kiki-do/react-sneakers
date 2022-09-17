@@ -4,76 +4,98 @@
   "id": 1,
   "title": "Мужские Кроссовки Nike Blazer Mid Suede",
   "price": 12999,
-  "imageUrl": "img/sneaker.svg"
+  "imageUrl": "img/sneaker.svg",
+  "liked": false,
+  "favourited": false
  },
  {
   "productId": 2,
   "id": 2,
   "title": "Мужские Кроссовки Nike Air Max 270",
   "price": 12999,
-  "imageUrl": "img/air_max.svg"
+  "imageUrl": "img/air_max.svg",
+  "liked": false,
+  "favourited": false
  },
  {
   "productId": 3,
   "id": 3,
   "title": "Мужские Кроссовки Nike Blazer Mid Suede",
   "price": 8499,
-  "imageUrl": "img/sneaker.svg"
+  "imageUrl": "img/sneaker.svg",
+  "liked": false,
+  "favourited": false
  },
  {
   "productId": 4,
   "id": 4,
   "title": "Кроссовки Puma X Aka Boku Future Rider",
   "price": 8999,
-  "imageUrl": "img/puma_boku.svg"
+  "imageUrl": "img/puma_boku.svg",
+  "liked": false,
+  "favourited": false
  },
  {
   "productId": 5,
   "id": 5,
   "title": "Мужские Кроссовки Under Armour Curry 8",
   "price": 15199,
-  "imageUrl": "img/5.svg"
+  "imageUrl": "img/5.svg",
+  "liked": false,
+  "favourited": false
  },
  {
   "productId": 6,
   "id": 6,
   "title": "Мужские Кроссовки Nike Kyrie 7",
   "price": 11299,
-  "imageUrl": "img/6.svg"
+  "imageUrl": "img/6.svg",
+  "liked": false,
+  "favourited": false
  },
  {
   "productId": 7,
   "id": 7,
   "title": "Мужские Кроссовки Jordan Air Jordan 11",
   "price": 10799,
-  "imageUrl": "img/7.svg"
+  "imageUrl": "img/7.svg",
+  "liked": false,
+  "favourited": false
  },
  {
   "productId": 8,
   "id": 8,
   "title": "Мужские Кроссовки Nike LeBron XVIII",
   "price": 16499,
-  "imageUrl": "img/8.svg"
+  "imageUrl": "img/8.svg",
+  "liked": false,
+  "favourited": false
  },
  {
   "productId": 9,
   "id": 9,
   "title": "Мужские Кроссовки Nike Lebron XVIII Low",
   "price": 13999,
-  "imageUrl": "img/9.svg"
+  "imageUrl": "img/9.svg",
+  "liked": false,
+  "favourited": false
  },
  {
   "productId": 10,
   "id": 10,
   "title": "Мужские Кроссовки Nike Blazer Mid Suede",
   "price": 8499,
-  "imageUrl": "img/10.svg"
+  "imageUrl": "img/10.svg",
+  "liked": false,
+  "favourited": false
  },
  {
   "productId": 11,
   "id": 11,
   "title": "Мужские Кроссовки Nike Kyrie Flytrap IV",
   "price": 13299,
-  "imageUrl": "img/11.svg"
+  "imageUrl": "img/11.svg",
+  "liked": false,
+  "favourited": false
  }
 ]

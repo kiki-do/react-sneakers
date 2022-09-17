@@ -1,22 +1,27 @@
 import React from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import Card from '../components/Card/Card';
+import { clearFavourite } from '../store/slices/favouriteSlice';
 
-function Favourite({ items, onAddToFavourite }) {
+const Favourite = () => {
+  const items = useSelector((state) => state.favouriteSlice.items);
+  const dispatch = useDispatch();
+
+  const onClickButton = () => {
+    dispatch(clearFavourite());
+  };
+
   return (
     <div>
       <div className="favourite">Мои закладки</div>
       {items.length > 0 ? (
         <section>
-          {items.map((item, index) => (
-            <Card
-              id={item.id}
-              key={index} // Желательно указывать конкретное значение в нашем случае можно указать title, price...
-              imageUrl={item.imageUrl}
-              favourited={true}
-              onFavourite={onAddToFavourite}
-              {...item}
-            />
+          {items.map((items, index) => (
+            <Card key={index} items={items} />
           ))}
+          <button className="favourite__button" onClick={onClickButton}>
+            Очистить корзину
+          </button>
         </section>
       ) : (
         <div className="empty_favourite">
@@ -27,6 +32,6 @@ function Favourite({ items, onAddToFavourite }) {
       )}
     </div>
   );
-}
+};
 
 export default Favourite;
