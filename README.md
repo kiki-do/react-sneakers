@@ -9,6 +9,7 @@ https://kiki-do.github.io/react-sneakers/
 - HTML
 - SASS
 - React
+- Redux-Toolkit
 - JavaScript
 - Axios
 
@@ -16,5 +17,5 @@ https://kiki-do.github.io/react-sneakers/
 
 - Возможность добавлять в корзину и в закладки кроссовки
 - Поиск по названию
-- Изменение количества товара в корзине
 - Удаление кроссовок с корзины
+- Удаление кроссовок с закладок
