@@ -6,7 +6,6 @@ https://kiki-do.github.io/react-sneakers/
 
 ## Стек технологии:
 
-- HTML
 - SASS
 - React
 - Redux-Toolkit
